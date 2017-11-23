@@ -4,6 +4,8 @@ class Midi {
   private final int MIDIBREATHCC = 2;
   private final int MODULATIONCC = 1;
   private final int TOUCHCC = 19;
+  //private final String midiOutBusName = "loopMIDI Port 1"; // when using my Windows machine
+  private final String midiOutBusName = "Bus 1"; // when using my Apple machine
   
   private ControlChange _breathController;
   //private boolean _breathControllerValueChanged;
@@ -18,7 +20,7 @@ class Midi {
     _breathController.channel = 0;
     _breathController.number = 2; 
     MidiBus.list(); // List all available Midi devices on STDOUT. This will show each device's index and name.
-    outputBus = new MidiBus(null, "", "loopMIDI Port 1");
+    outputBus = new MidiBus(null, "", midiOutBusName);
   }
   
   void update(HarmonicaState state){

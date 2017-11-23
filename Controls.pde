@@ -27,13 +27,10 @@ class Controls extends Observable {
   // TOUCH
   void setTouch(int value) {
 
-  //if (value < 0) {value = value * -1;} else {  value = value + 600;}
-  
-  println(value);
-  if (_touch != value) {
-      _touch = value;
-      setChanged();
-      notifyObservers();
+    if (_touch != value) {
+        _touch = value;
+        setChanged();
+        notifyObservers();
     }
   }
   

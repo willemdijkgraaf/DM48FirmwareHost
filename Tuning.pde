@@ -30,7 +30,7 @@ class Tuning {
     for (int octaves = 0; octaves < 128; octaves = octaves + 12) {
       for (int index = 0; index < 16; index = index + 1) {
         int pitch = soloTuning[index] + octaves;
-        println ("pitch: " + (i) + " -> " + pitch);
+        //println ("pitch: " + (i) + " -> " + pitch);
         soloTuningTable[i] = pitch;
         i = i + 1;
       }
